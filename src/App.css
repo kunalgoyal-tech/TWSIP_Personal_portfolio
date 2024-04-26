@@ -1,0 +1,355 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: hsl(0, 0%, 12%);
+  transition: 0.25s ease-in-out;
+}
+
+body.active {
+  overflow: hidden;
+}
+
+
+
+/*-----------------------------------*\
+  * #REUSED STYLE
+ \*-----------------------------------*/
+
+.h2,
+.h3,
+.h4 {
+  color: hsl(0, 0%, 100%);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+}
+
+.btn-primary {
+  border-color: hsl(0, 0%, 100%);
+}
+
+.btn-primary:is(:hover, :focus) {
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 12%);
+}
+.section-content {
+  position: relative;
+  padding-left: 40px;
+}
+
+.section-subtitle {
+  position: relative;
+  color: hsl(0, 0%, 62%);
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.section-subtitle::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: hsl(0, 0%, 62%);
+  border: 2px solid pink;
+}
+
+.section-title {
+  max-width: 350px;
+  margin-bottom: 30px;
+}
+
+.section-text {
+  color: hsl(0, 0%, 62%);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/**
+  * responsive for larger than 550px screen
+  */
+
+@media (min-width: 550px) {
+
+  /**
+    * REUSED STYLE
+    */
+
+  .container {
+    max-width: 450px;
+    margin-inline: auto;
+  }
+
+  .section-title {
+    max-width: 380px;
+  }
+}
+
+/**
+  * responsive for larger than 768px screen
+  */
+
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 720px;
+  }
+
+   .section-title{
+    max-width: 430px;
+    padding: 10px;
+  }
+  .section-text{
+    padding: 8px;
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .about .btn {
+    max-width: max-content;
+  }
+
+  .about .btn-secondary {
+    margin-bottom: 0;
+  }
+
+  .contact-form {
+    max-width: 450px;
+    margin-inline: auto;
+  }
+
+}
+/**
+  * responsive for larger than 992px screen
+  */
+
+@media (min-width: 992px) {
+
+  .section-subtitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(0.75turn) translateX(-100%);
+    transform-origin: left top;
+    margin-bottom: 0;
+  }
+
+  .section-subtitle::after {
+    top: 8px;
+    left: auto;
+    right: calc(100% + 20px);
+  }
+
+ /**
+    * HEADER
+    */
+
+  .header {
+    padding-block: 30px;
+  }
+
+  .header.active {
+    padding-block: 15px;
+  }
+
+  .nav-toggle-btn {
+    display: none;
+  }
+
+  .navbar {
+    all: unset;
+  }
+
+  .navbar-link {
+    transform: translateY(0);
+    font-size: unset;
+    padding-inline: 5px;
+  }
+
+  .navbar-list>li {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .navbar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .navbar-link::before {
+    height: 2px;
+  }
+
+  /**
+    * HERO
+    */
+
+  .hero {
+    position: relative;
+    padding-top: 0;
+    height: 100vh;
+  }
+
+  .hero-banner {
+    max-width: unset;
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .hero img {
+    height: 100%;
+    width: auto;
+    margin-inline: auto;
+  }
+
+  .hero-content {
+
+    position: absolute;
+    top: 80%;
+    
+  }
+
+  .hero .btn-primary:is(:hover, :focus) {
+    color: hsl(0, 0%, 12%);
+  }
+
+  .hero-social-list {
+    display: block;
+    position: absolute;
+    bottom: 92px;
+    left: -30px;
+  }
+
+  /**
+    * ABOUT
+    */
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .about-banner {
+    margin-bottom: 0;
+  }
+  /**
+    * SKILLS
+    */
+
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .skills-content {
+    margin-bottom: 0;
+  }
+
+  .skills-toggle {
+    margin-inline: 0;
+  }
+
+  /**
+    * CONTACT
+    */
+
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .contact-content {
+    margin-bottom: 0;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-list {
+    margin-left: -40px;
+  }
+
+ }
+
+/**
+  * responsive for larger than 1200px screen
+  */
+
+@media (min-width: 1200px) {
+
+  /**
+    * REUSED STYLE
+    */
+
+  .container {
+    max-width: 1150px;
+  }
+
+  .section-title {
+    max-width: 460px;
+  }
+  /**
+    * HERO
+    */
+
+  .hero-social-list {
+    left: -80px;
+  }
+
+  .scroll-down {
+    right: -80px;
+  }
+  /**
+    * ABOUT
+    */
+
+  .about-banner {
+    max-width: 450px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

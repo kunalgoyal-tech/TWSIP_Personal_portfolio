@@ -1,0 +1,99 @@
+.contact {
+  padding-block: 70px;
+  background: hsl(0, 0%, 12%);
+}
+
+.contact-content {
+  margin-bottom: 50px;
+}
+
+.contact-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-item-icon {
+  font-size: 25px;
+  color: rgb(192, 115, 153);
+ }
+
+.contact-item-icon ion-icon {
+  --ionicon-stroke-width: 40px;
+}
+
+.contact-item-title {
+  margin-bottom: 13px;
+  margin-top: 7px;
+  color: hsl(0, 0%, 62%)
+}
+
+.contact-list-item .contact-info {
+  color: hsl(0, 0%, 62%);
+  font-style: normal;
+  line-height: 1.6;
+  transition: 0.25s ease-in-out;
+}
+
+.contact-info:not(address):is(:hover, :focus) {
+  color: red;
+}
+.contact-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  padding-inline: 40px;
+}
+.contact-form {
+  background: hsl(0, 0%, 19%);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.form-wrapper {
+  margin-bottom: 25px;
+}
+
+.form-label {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.77rem;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 8px;
+  margin-left: 5px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-field {
+  background: hsl(0, 0%, 16%);
+  color: hsl(24, 74%, 58%);
+  padding: 10px;
+  padding-left: 40px;
+  border-radius: 12px;
+  transition: 0.25s ease-in-out;
+}
+
+textarea.input-field {
+  min-height: 60px;
+  height: 120px;
+  max-height: 200px;
+  resize: vertical;
+}
+
+.input-field:focus {
+  outline: 1px solid;
+}
+
+
+input,
+textarea {
+  width: 100%;
+  background: none;
+  border: none;
+  font: inherit;
+}
