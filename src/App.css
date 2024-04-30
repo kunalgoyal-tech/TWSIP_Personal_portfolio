@@ -44,7 +44,8 @@ body.active {
 }
 .section-content {
   position: relative;
-  padding-left: 40px;
+  padding-left: 7px;
+    padding-right: 7px;
 }
 
 .section-subtitle {
@@ -75,6 +76,7 @@ body.active {
   color: hsl(0, 0%, 62%);
   line-height: 1.8;
   margin-bottom: 30px;
+  font-size: 22px;
 }
 
 /**
@@ -88,7 +90,7 @@ body.active {
     */
 
   .container {
-    max-width: 450px;
+    /* max-width: 450px; */
     margin-inline: auto;
   }
 
@@ -318,9 +320,9 @@ body.active {
     * HERO
     */
 
-  .hero-social-list {
+  /* .hero-social-list {
     left: -80px;
-  }
+  } */
 
   .scroll-down {
     right: -80px;
